@@ -1,7 +1,11 @@
 Packages:
-cv2 -- pip install opencv
+cv2 -- pip install opencv-python
 
 numpy -- pip install numpy
+
+serial -- pip install pyserial
+
+
 
 
 Motion detection based on background subtraction
