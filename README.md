@@ -3,7 +3,7 @@ cv2 -- pip install opencv-python
 
 numpy -- pip install numpy
 
-serial -- pip install serial
+serial -- pip install pyserial
 
 
 
