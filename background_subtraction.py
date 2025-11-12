@@ -11,6 +11,16 @@ object_age = 0  #how many frames in a row target has been tracked
 min_age_to_draw = 3  #how many frames before we draw
 distance_threshold = 30  #max distance between centre points
 
+fps = capture.get(cv.CAP_PROP_FPS)
+width = int(capture.get(cv.CAP_PROP_FRAME_WIDTH))
+height = int(capture.get(cv.CAP_PROP_FRAME_HEIGHT))
+print(f"Video Info: {width}x{height} at {fps:.2f} FPS")
+
+capture.set(cv.CAP_PROP_AUTO_EXPOSURE, 1)
+
+
+capture.set(cv.CAP_PROP_AUTO_WB, 1)
+
 
 while capture.isOpened():
     ret, frame = capture.read()
