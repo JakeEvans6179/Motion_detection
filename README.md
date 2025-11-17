@@ -16,3 +16,13 @@ To plot an object we take centre points of all the bounding boxes and add them t
 The object must be within a eucladian distance of 30 pixels from the last frame to be valid and also must have existed for a minimum of three frames before being plotted.
 
 This program successfully tracks single objects however if more than one object is moving in the frame.
+
+
+Camera calibration - due to camera distorsion and camera properties need to calibrate using opencv
+
+github repo to calibrate camera and find camera matrix and distorsion coeffiecients: https://github.com/niconielsen32/camera-calibration
+
+allows us to undistort image and find the true angle of any pixel within the frame
+
+use the board in this repo for calibration - set size to [CHESSBOARD_SIZE = (8, 6)] 
+set resolution to camera resolution and calibrate
