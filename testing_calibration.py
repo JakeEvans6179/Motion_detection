@@ -112,6 +112,7 @@ min_age_to_draw = 3
 #distance_threshold = 30
 
 distance_threshold = 20
+kernel = np.ones((5, 5), np.uint8)
 
 try:
     while capture.isOpened():
@@ -157,7 +158,6 @@ try:
         fg_mask = subtractor.apply(frame)
 
         #fg_mask = subtractor.apply(frame)
-        kernel = np.ones((5, 5), np.uint8)
         fg_mask = cv.erode(fg_mask, kernel, iterations=1)
         fg_mask = cv.dilate(fg_mask, kernel, iterations=1)
         contours, _ = cv.findContours(fg_mask, cv.RETR_EXTERNAL, cv.CHAIN_APPROX_SIMPLE)
