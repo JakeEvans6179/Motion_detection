@@ -8,6 +8,7 @@ import math
 
 '''
 Testing with servo laser, input pixel coordinate in input_value [x,y] list in main while loop and script will send angles to servo to aim at 
+can test once camera calibration has been completed (got camera matrix and distortion values) and run the sweeping test for fixed distance to get regression weights for camera offset
 
 '''
 

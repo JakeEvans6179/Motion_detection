@@ -23,6 +23,14 @@ GitHub repo to calibrate camera and find camera matrix and distortion coefficien
 Allows us to undistort image and find the true angle of any pixel within the frame and sending the angles to a servo to aim and "fire" a laser pointer at source of movement
 Currently attempting to make it work assuming a fixed distance (2m), if we want to accurately aim at different distances need to determine the distance from camera using triangulation (2 cameras).
 
+
+*new* - treat system as a black box, we use the camera matrix and distortion values to undistort the image and run a sweep of laser from left to right mapping our x and y pan and tilt values to servo values
+Then we can run linear regression to let the program figure out the offset. Since we have undistorted the image the relationship will be a straight line y = w_1*x + b - and can recalibrate when we want to track at another fixed distance.
+
+If we wanted to treat the whole system as a black box we could map the screen pixels to servo angles directly, however this would result in a more complex regression equation
+Since there is a fisheye effect with the camera the regression equation will be polynomial (either 2nd order or 3rd order)
+
+
 use the board in this repo for calibration - set size to [CHESSBOARD_SIZE = (8, 6)] 
 set resolution to camera resolution and calibrate
 
