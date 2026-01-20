@@ -34,3 +34,8 @@ Since there is a fisheye effect with the camera the regression equation will be 
 use the board in this repo for calibration - set size to [CHESSBOARD_SIZE = (8, 6)] 
 set resolution to camera resolution and calibrate
 
+
+use camera_testing.py to find the correct settings for the laser to be detected on the computer camera
+Input the values into the calibration_ml_script to run the servo and map input to output.
+Run linear regression to determine the line of best fit
+
